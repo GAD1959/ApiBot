@@ -82,3 +82,13 @@ class OdooAPI:
             [params]
         )
 
+    def update(self, model, id, params):
+        return self.models.execute_kw(
+            self.db,
+            self.uid,
+            self.password,
+            model,
+            'write',
+            [[id], params]
+        )
+
