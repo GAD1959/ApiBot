@@ -89,7 +89,7 @@ class OdooAPI:
             self.password,
             model,
             'write',
-            [[id], params]
+            [id, params]
         )
 
     def graba_mensaje(self, model, id, mensaje):
