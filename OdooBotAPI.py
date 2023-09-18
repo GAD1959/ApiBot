@@ -92,3 +92,13 @@ class OdooAPI:
             [[id], params]
         )
 
+    def graba_mensaje(self, model, id, mensaje):
+        return self.models.execute_kw(
+            self.db,
+            self.uid,
+            self.password,
+            model,
+            'message_post',
+            [id],
+            {'body': mensaje}
+        )
